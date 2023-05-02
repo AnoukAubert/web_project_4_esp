@@ -1,0 +1,10 @@
+.new-post {
+    width: 430px;
+    height: 330px;
+    background: rgba(255, 255, 255, .95);
+    border-right: 1px solid #000;
+    position: fixed;
+    /*top: 0;
+    left: 0;*/
+    transition: center .5s;
+}

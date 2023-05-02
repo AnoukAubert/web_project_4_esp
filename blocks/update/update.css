@@ -1,0 +1,10 @@
+.update {
+    background-color: black;
+    max-width: 100vw;
+    padding-top: 50px;
+    padding-left: 199px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 21px;
+}

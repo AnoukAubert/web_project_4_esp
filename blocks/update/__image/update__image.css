@@ -1,0 +1,6 @@
+.update__image {
+  width: 282px;
+  height: 282px;
+  border-radius: 10px 10px 0px 0px;
+  background-image: url(/images/image1.png);
+}

@@ -1,0 +1,8 @@
+.profile {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    max-width: 866px;
+    margin-left: 199px;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<link rel="stylesheet" href="pages/index.css" type="text/css">
+<link rel="icon" type="image/x-icon" href="https://code.s3.yandex.net/web-code/favicon.ico">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Around the US</title>
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <img class="header__logo" alt="logo Around The US" src="./images/logo.svg">
+      <section class="profile">
+        <img class="profile__image" src="./images/Avatar.png" alt="imagen de perfil">
+        <div class="profile__container">
+          <h1 class="profile__name">Jacques Cousteau</h1>
+          <h4 class="profile__desciption">Explorador</h4>
+        </div>
+        <button class="profile__add_btn">+</button>
+      </section>
+    </header>
+    <div class="new-post new-post__closed">
+        <h3 class="new-post__title">Nuevo lugar</h3>
+        <form class="new-post__form">
+            <input type="text" placeholder="Titulo" class="new-post__text"></input>
+            <input type="url" placeholder="Enlace a la imagen" class="new-post__url"></input>
+        </form>
+        <button type="submit" class="new-post__create_btn">Crear</button>
+    </div>
+    <main class="content">
+      <section class="update">
+        <div class="update__card">
+            <div class="update__image">
+            <button class="update__delete_btn"></button></div>
+            <div class="update__description"><h2 class="update__title">Valle de Yosemite</h2>
+            <button class="update__like_btn"></button></div>
+        </div>
+        <div class="update__card">
+            <img class="update__image" src="./images/image1.png" alt=" ">
+            <button class="update__delete_btn"></button>
+            <h2 class="update__title"></h2>
+            <button class="update__like_btn"></button>
+        </div>
+        <div class="update__card">
+            <img class="update__image" src="./images/image1.png" alt=" ">
+            <button class="update__delete_btn"></button>
+            <h2 class="update__title"></h2>
+            <button class="update__like_btn"></button>
+        </div>
+        <div class="update__card">
+            <img class="update__image" src="./images/image1.png" alt=" ">
+            <button class="update__delete_btn"></button>
+            <h2 class="update__title"></h2>
+            <button class="update__like_btn"></button>
+        </div>
+        <div class="update__card">
+            <img class="update__image" src="./images/image1.png" alt=" ">
+            <button class="update__delete_btn"></button>
+            <h2 class="update__title"></h2>
+            <button class="update__like_btn"></button>
+        </div>
+        <div class="update__card">
+            <img class="update__image" src="./images/image1.png" alt=" ">
+            <button class="update__delete_btn"></button>
+            <h2 class="update__title"></h2>
+            <button class="update__like_btn"></button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__author">&copy; 2023 Anouk Aubert</p>
+    </footer>
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>
