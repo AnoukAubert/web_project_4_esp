@@ -2,4 +2,23 @@
     width: 150px;
     height: 50px;
     margin-left: 152px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: 1px, #fff;
+    font-size: 36px;
 }
+@media screen and (min-width:768px) and (max-width: 1280px) {
+    .profile__add_btn {
+      margin-left: 20%;
+    }
+  }
+  @media screen and (min-width:0px) and (max-width: 768px) {
+    .profile__add_btn {
+      width: 282px;
+      margin: 0;
+    }
+  }
+  .profile__add_btn:hover {
+    opacity: 0.5;
+  }

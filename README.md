@@ -1,6 +1,10 @@
-# Proyecto 4: Alrededor de los Estados Unidos
+Proyecto 4: Alrededor de los Estados Unidos
 
-### Descripción general
+En este proyecto se inició el uso de JavaScript, la página trata de una pseudo red social donde se pueda compartir ímagenes con una breve descripición, información de perfil del usuario, agregar y borrar contenido así como editarlo.
+
+Las tecnologías utilizadas fueron Figma, Visual Code Studio, Google Search.
+
+Enlace: https://anoukaubert.github.com/web_project_4_esp/
 
 * Figma
 * Imágenes

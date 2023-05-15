@@ -1,0 +1,22 @@
+.edit-profile {
+  position: absolute;
+  width: 430px;
+  height: 330px;
+  background: rgba(255, 255, 255, 1);
+  border-right: 1px solid #000;
+  left: 0px;
+  top: 0px;
+}
+@media screen and (min-width:768px) and (max-width: 1280px)  {
+  .edit-profile {
+    margin-left: 25%;
+  }
+  
+}
+@media screen and (min-width:0px) and (max-width: 768px)  {
+  .edit-profile {
+    margin-left: 10%;
+    width: 80%;
+  }
+  
+}

@@ -1,0 +1,9 @@
+.footer {
+  background-color: black;
+  padding: 16px 0 16px 199px;
+}
+@media screen and (min-width:0px) and (max-width: 1280px) {
+    .footer {
+      padding-left: 10%;
+    }
+  }

@@ -3,4 +3,12 @@
   font-weight: 500;
   font-size: 42px;
   line-height: 56px;
+  margin-top: 1px;
+  margin-bottom: 0;
+}
+@media screen and (min-width:768px) and (max-width: 1280px) {
+  .profile__name {
+    width: 150px;
+    margin-left: 10%;
+  }
 }

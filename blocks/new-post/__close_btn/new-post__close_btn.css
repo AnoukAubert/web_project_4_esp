@@ -1,0 +1,16 @@
+.new-post__close_btn {
+  margin-top: -360px;
+  margin-left: 430px;
+  border: none;
+  background: url(/images/Closecon.png) center no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  opacity: 1;
+  transition: 0.3s;
+}
+.new-post__close_btn:hover {
+  opacity: 0.5;
+}
