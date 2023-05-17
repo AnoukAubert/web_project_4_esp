@@ -1,97 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<link rel="stylesheet" href="./pages/index.css" type="text/css">
-<link rel="icon" type="image/x-icon" href="https://code.s3.yandex.net/web-code/favicon.ico">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Around the US</title>
-</head>
-<body>
-  <div class="page">
-    <header class="header">
-      <img class="header__logo" alt="logo Around The US" src="./images/logo.svg">
-      <section class="profile">
-        <img class="profile__image" src="./images/Avatar.png" alt="imagen de perfil">
-        <div class="profile__container">
-          <h1 class="profile__name">Jacques Cousteau</h1>
-          <h4 class="profile__desciption">Explorador        <button onclick="editProfile()" class="profile__edit_btn"></button></h4>
-        </div>
+  <head>
+    <link rel="stylesheet" href="./pages/index.css" type="text/css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://code.s3.yandex.net/web-code/favicon.ico"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Around the US</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <img class="header__logo" alt="logo Around The US" src="./images/logo.svg"/>
+        <section class="profile"> 
+          <img class="profile__image" src="./images/Avatar.png" alt="imagen de perfil"/>
+          <div class="profile__container">
+            <h1 class="profile__name">Jacques Cousteau</h1>
+            <div class="profile__container-b"><h4 class="profile__desciption">Explorador</h4>
+            <button onclick="editProfile()" class="profile__edit_btn"></button></div>
+          </div>
 
-        
-        
-        <button class="profile__add_btn">+</button>
-        <section class="new-post new-post__closed">
-        <div class="new-post__open">
-          <button class="new-post__close_btn"></button>
-          <h3 class="new-post__title">Nuevo lugar</h3>
-          <form class="new-post__form">
-            <input type="text" placeholder="Titulo" class="new-post__text"></input>
-            <input type="url" placeholder="Enlace a la imagen" class="new-post__url"></input>
-          </form>
-          <button type="submit" class="new-post__create_btn">Crear</button>
-        </div>
+          <button class="profile__add_btn">+</button>
+          <section class="new-post new-post__closed">
+            <div class="new-post__open">
+              <button class="new-post__close_btn"></button>
+              <h3 class="new-post__title">Nuevo lugar</h3>
+              <form class="new-post__form">
+                <input type="text" placeholder="Titulo" class="new-post__text"/>
+                <input type="text" placeholder="Enlace a la imagen" class="new-post__url"/>
+              </form>
+              <button type="submit" class="new-post__create_btn">Crear</button>
+            </div>
+          </section>
         </section>
-      </section>
-    </header>
-    
-    <main class="content">
-      <section class="update">
-        <div class="update__card">
-          <img class="update__image" src="./images/image1.png" alt=" ">
-          <button class="update__delete_btn"></button>
-          <div class="update__description"><h2 class="update__title">Valle de Yosemite</h2>
-          <button class="update__like_btn"></button></div>
-        </div>
-        <div class="update__card">
-          <img class="update__image" src="./images/image2.png" alt=" ">
-          <button class="update__delete_btn"></button>
-          <div class="update__description"><h2 class="update__title">Lago Louise</h2>
-          <button class="update__like_btn"></button></div>
-        </div>
-        <div class="update__card">
-          <img class="update__image" src="./images/image3.png" alt=" ">
-          <button class="update__delete_btn"></button>
-          <div class="update__description"><h2 class="update__title">Motañas Calvas</h2>
-          <button class="update__like_btn"></button></div>
-        </div>
-        <div class="update__card">
-          <img class="update__image" src="./images/image4.png" alt=" ">
-          <button class="update__delete_btn"></button>
-          <div class="update__description"><h2 class="update__title">Latemar</h2>
-          <button class="update__like_btn"></button></div>
-        </div>
-        <div class="update__card">
-          <img class="update__image" src="./images/image5.png" alt=" ">
-          <button class="update__delete_btn"></button>
-          <div class="update__description"><h2 class="update__title">Parque Nacional de la Vanoise</h2>
-          <button class="update__like_btn"></button></div>
-        </div>
-        <div class="update__card">
-          <img class="update__image" src="./images/image6.png" alt=" ">
-          <button class="update__delete_btn"></button>
-          <div class="update__description"><h2 class="update__title">Lago di Braies</h2>
-          <button class="update__like_btn"></button></div>
-        </div>
-      </section>
-      
-    </main>
-  
-    <footer class="footer">
-      <p class="footer__author">&copy; 2023 Anouk Aubert</p>
-    </footer>
-    
-  </div>
-  <section class="edit-profile edit-profile__closed">
-    <div class="edit-profile__background"></div>
-    <button onclick="closeEdit()" class="edit-profile__close_btn"></button>
-    <h3 class="edit-profile__title">Editar Perfil</h3>
-    <form class="edit-profile__form">
-      <input type="text" placeholder="Nombre" class="edit-profile__text"></input>
-      <input type="url" placeholder="Acerca de mi" class="edit-profile__about-me"></input>
-    </form>
-    <button onclick="handleProfileFormSubmit(evt)" type="submit" class="edit-profile__create_btn">Crear</button>
-   </section>
-  <script src="script.js"></script>
-</body>
+      </header>
+
+      <main class="content">
+        <section class="update">
+          <div class="update__card">
+            <img class="update__image" src="./images/image1.png" alt="un río por el que corren a sus orillas cientos de árboles que llegan hasta unas montañas nevadas al atardecer" />
+            <button class="update__delete_btn"></button>
+            <div class="update__description">
+              <h2 class="update__title">Valle de Yosemite</h2>
+              <button class="update__like_btn"></button>
+            </div>
+          </div>
+          <div class="update__card">
+            <img class="update__image" src="./images/image2.png" alt="un espejo de agua turquesa en el que se ven reflejadas montañas" />
+            <button class="update__delete_btn"></button>
+            <div class="update__description">
+              <h2 class="update__title">Lago Louise</h2>
+              <button class="update__like_btn"></button>
+            </div>
+          </div>
+          <div class="update__card">
+            <img class="update__image" src="./images/image3.png" alt="un cielo naranja producto del atardecer en el que se visualizan montañas oscuras a causa del efecto del sol" />
+            <button class="update__delete_btn"></button>
+            <div class="update__description">
+              <h2 class="update__title">Motañas Calvas</h2>
+              <button class="update__like_btn"></button>
+            </div>
+          </div>
+          <div class="update__card">
+            <img class="update__image" src="./images/image4.png" alt="unas imponentes montañas rodeadas de un hermoso cielo nocturno estrellado" />
+            <button class="update__delete_btn"></button>
+            <div class="update__description">
+              <h2 class="update__title">Latemar</h2>
+              <button class="update__like_btn"></button>
+            </div>
+          </div>
+          <div class="update__card">
+            <img class="update__image" src="./images/image5.png" alt="el reflejo de una montaña sobre un lago con orillas rocosas" />
+            <button class="update__delete_btn"></button>
+            <div class="update__description">
+              <h2 class="update__title">Parque Nacional de la Vanoise</h2>
+              <button class="update__like_btn"></button>
+            </div>
+          </div>
+          <div class="update__card">
+            <img class="update__image" src="./images/image6.png" alt="un lago con varias embarcaciones amarradas a un muelle, a lo lejos se divisan montañas con bases boscosas, todo esto se refleja en las aguas perfectamente calmas" />
+            <button class="update__delete_btn"></button>
+            <div class="update__description">
+              <h2 class="update__title">Lago di Braies</h2>
+              <button class="update__like_btn"></button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__author">&copy; 2023 Anouk Aubert</p>
+      </footer>
+    </div>
+    <section class="edit-profile edit-profile__closed">
+      <div class="edit-profile__background"></div>
+      <button onclick="closeEdit()" class="edit-profile__close_btn"></button>
+      <h3 class="edit-profile__title">Editar Perfil</h3>
+      <form class="edit-profile__form">
+        <input type="text" placeholder="Nombre" class="edit-profile__text" />
+        <input type="text" placeholder="Acerca de mi" class="edit-profile__about-me" />
+      </form>
+      <button onclick="handleProfileFormSubmit()" class="edit-profile__create_btn">Guardar</button>
+    </section>
+    <script src="script.js"></script>
+  </body>
 </html>
