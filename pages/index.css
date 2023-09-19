@@ -17,7 +17,10 @@
 @import url(../blocks/update/__card/update__card.css);
 @import url(../blocks/update/__delete_btn/update__delete_btn.css);
 @import url(../blocks/update/__image/update__image.css);
+@import url(../blocks/update/__image_zoom/update__image_zoom.css);
+@import url(../blocks/update/__image_zoom_xbtn/update__image_zoom_xbtn.css);
 @import url(../blocks/update/__like_btn/update__like_btn.css);
+@import url(../blocks/update/__liked_btn/update__liked_btn.css);
 @import url(../blocks/update/__title/update__title.css);
 @import url(../blocks/update/__desciption/update__description.css);
 @import url(../blocks/update/update.css);
@@ -37,3 +40,9 @@
 @import url(../blocks/edit-profile/__text/edit-profile__text.css);
 @import url(../blocks/edit-profile/__title/edit-profile__title.css);
 @import url(../blocks/edit-profile/edit-profile.css);
+@import url(../blocks/zoom/__close_btn/zoom__close_btn.css);
+@import url(../blocks/zoom/__closed/zoom__closed.css);
+@import url(../blocks/zoom/__image/zoom__image.css);
+@import url(../blocks/zoom/__open/zoom__open.css);
+@import url(../blocks/zoom/__title/zoom__tittle.css);
+@import url(../blocks/zoom/zoom.css);

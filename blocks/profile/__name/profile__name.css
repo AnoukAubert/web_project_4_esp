@@ -8,7 +8,7 @@
 }
 @media screen and (min-width:768px) and (max-width: 1280px) {
   .profile__name {
-    width: 150px;
+    width: 50px;
     margin-left: 10%;
   }
 }

@@ -1,0 +1,14 @@
+.update__liked_btn {
+  border: none;
+  background: url(../../../images/liked.png) center no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+  position: absolute;
+  margin-left: 243px;
+  height: 19px;
+  width: 19px;
+  margin-top: 30px;
+}
+  .update__liked_btn:hover {
+    opacity: 0.5;
+  }

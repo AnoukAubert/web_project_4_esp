@@ -6,3 +6,10 @@
   line-height: 29px;
   color: #000000;
 }
+@media screen and (min-width:0px) and (max-width: 768px)  {
+  .new-post__title {
+    margin-left: 10%;
+    width: 80%;
+  }
+  
+}

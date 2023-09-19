@@ -1,0 +1,16 @@
+/*.update__image_zoom_xbtn {
+    margin-top: 500px;
+    margin-left: 430px;
+    border: none;
+    background: url(/images/Closecon.png ) center no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    opacity: 1;
+    transition: 0.3s;
+  }
+  .update__image_zoom_xbtn:hover {
+    opacity: 0.5;
+  }

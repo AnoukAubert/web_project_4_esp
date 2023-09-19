@@ -1,0 +1,11 @@
+.zoom__open {
+    position: absolute;
+    /*top: 90px*/
+    margin-top: 20%;
+    margin-left: 5%;
+    transition: center .5s;
+    justify-content: center;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 0px;
+    z-index: 1;
+  }

@@ -2,7 +2,7 @@
   margin-top: -360px;
   margin-left: 430px;
   border: none;
-  background: url(/images/Closecon.png) center no-repeat;
+  background: url(../../../images/Closecon.png) center no-repeat;
   background-size: 100%;
   cursor: pointer;
   height: 40px;
@@ -10,6 +10,11 @@
   position: absolute;
   opacity: 1;
   transition: 0.3s;
+}
+@media screen and (min-width:0px) and (max-width: 768px)  {
+  .new-post__close_btn {
+    margin-left: 100%;
+  }
 }
 .new-post__close_btn:hover {
   opacity: 0.5;

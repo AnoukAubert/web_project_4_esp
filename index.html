@@ -30,52 +30,12 @@
 
       <main class="content">
         <section class="update">
-          <div class="update__card">
-            <img class="update__image" src="./images/Yosemite.png" alt="un río por el que corren a sus orillas cientos de árboles que llegan hasta unas montañas nevadas al atardecer" />
-            <button class="update__delete_btn"></button>
+          <div class="update__card" id="0">
+            <img  class="update__image"/>
+            <button  class="update__delete_btn"></button>
             <div class="update__description">
-              <h2 class="update__title">Valle de Yosemite</h2>
-              <button class="update__like_btn"></button>
-            </div>
-          </div>
-          <div class="update__card">
-            <img class="update__image" src="./images/LagoLouise.png" alt="un espejo de agua turquesa en el que se ven reflejadas montañas" />
-            <button class="update__delete_btn"></button>
-            <div class="update__description">
-              <h2 class="update__title">Lago Louise</h2>
-              <button class="update__like_btn"></button>
-            </div>
-          </div>
-          <div class="update__card">
-            <img class="update__image" src="./images/MotanasCalvas.png" alt="un cielo naranja producto del atardecer en el que se visualizan montañas oscuras a causa del efecto del sol" />
-            <button class="update__delete_btn"></button>
-            <div class="update__description">
-              <h2 class="update__title">Motañas Calvas</h2>
-              <button class="update__like_btn"></button>
-            </div>
-          </div>
-          <div class="update__card">
-            <img class="update__image" src="./images/Latemar.png" alt="unas imponentes montañas rodeadas de un hermoso cielo nocturno estrellado" />
-            <button class="update__delete_btn"></button>
-            <div class="update__description">
-              <h2 class="update__title">Latemar</h2>
-              <button class="update__like_btn"></button>
-            </div>
-          </div>
-          <div class="update__card">
-            <img class="update__image" src="./images/PNVanoise.png" alt="el reflejo de una montaña sobre un lago con orillas rocosas" />
-            <button class="update__delete_btn"></button>
-            <div class="update__description">
-              <h2 class="update__title">Parque Nacional de la Vanoise</h2>
-              <button class="update__like_btn"></button>
-            </div>
-          </div>
-          <div class="update__card">
-            <img class="update__image" src="./images/LagodiBraies.png" alt="un lago con varias embarcaciones amarradas a un muelle, a lo lejos se divisan montañas con bases boscosas, todo esto se refleja en las aguas perfectamente calmas" />
-            <button class="update__delete_btn"></button>
-            <div class="update__description">
-              <h2 class="update__title">Lago di Braies</h2>
-              <button class="update__like_btn"></button>
+              <h2 class="update__title"></h2>
+              <button  class="update__like_btn"></button>
             </div>
           </div>
         </section>
@@ -84,25 +44,33 @@
       <footer class="footer">
         <p class="footer__author">&copy; 2023 Anouk Aubert</p>
       </footer>
-    </div>
-    <section class="edit-profile edit-profile__closed">
-      <button onclick="closeEdit()" class="edit-profile__close_btn"></button>
-      <h3 class="edit-profile__title">Editar Perfil</h3>
-      <form class="edit-profile__form">
-        <input type="text" class="edit-profile__text" />
-        <input type="text"  class="edit-profile__about-me" />
-      </form>
-      <button onclick="handleProfileFormSubmit()" class="edit-profile__create_btn">Guardar</button>
-    </section>
-    <section class="new-post new-post__closed">
-        <button onclick="closePost()" class="new-post__close_btn"></button>
-        <h3 class="new-post__title">Nuevo lugar</h3>
-        <form class="new-post__form">
-          <input type="text"class="new-post__text"/>
-          <input type="text" class="new-post__url"/>
+      
+      <section class="edit-profile edit-profile__closed">
+        <button onclick="closeEdit()" class="edit-profile__close_btn"></button>
+        <h3 class="edit-profile__title">Editar Perfil</h3>
+        <form class="edit-profile__form">
+          <input type="text" class="edit-profile__text" />
+          <input type="text"  class="edit-profile__about-me" />
         </form>
-        <button class="new-post__create_btn">Crear</button>
-    </section>
+        <button onclick="handleProfileFormSubmit()" class="edit-profile__create_btn">Guardar</button>
+      </section>
+      <section class="new-post new-post__closed">
+          <button onclick="closePost()" class="new-post__close_btn"></button>
+          <h3 class="new-post__title">Nuevo lugar</h3>
+          <form class="new-post__form">
+            <input class="new-post__text"/>
+            <input class="new-post__url"/>
+          </form>
+          <button class="new-post__create_btn">Crear</button>
+      </section>
+      <section class="zoom zoom__closed">
+        <button onclick="closeZoom()" class="zoom__close_btn"></button>
+        <img class="zoom__image">
+        <h3 class="zoom__title"></h3>
+      </section>
+
+    </div>
+   
     <script src="script.js"></script>
   </body>
 </html>
