@@ -1,6 +1,6 @@
 let editOpen = document.querySelector(".edit-profile__open");
 let profileContainer = document.querySelector(".profile__container");
-let profileEditButton = document.getElementsByClassName(".profile__edit_btn");
+let profileEditButton = document.getElementsByClassName(".profile__edit-btn");
 const container = document.querySelector(".update");
 const card = document.querySelector(".card");
 const updateCard = document.querySelector(".update__card");
@@ -40,7 +40,7 @@ const initialCards = [
 
 function closeZoom() {
   document.querySelector(".zoom").classList.remove("zoom__open");
-  document.querySelector(".zoom").classList.add("zoom__closed");
+  document.querySelector(".zoom").classList.add("zoom-disabled");
 }
 
 initialCards.forEach((card, index) => {
@@ -49,7 +49,7 @@ initialCards.forEach((card, index) => {
     imagen.src = card.link;
     imagen.onclick = function zoomPic() {
       let popZoom = document.querySelector(".zoom");
-      popZoom.classList.remove("zoom__closed");
+      popZoom.classList.remove("zoom-disabled");
       popZoom.classList.add("zoom__open");
       let popImage = document.querySelector(".zoom__image");
       popImage.src = card.link;
@@ -59,19 +59,19 @@ initialCards.forEach((card, index) => {
     let texto = updateCard.querySelector(".update__title");
     texto.textContent = card.name;
 
-    let like = updateCard.querySelector(".update__like_btn");
+    let like = updateCard.querySelector(".update__like-btn");
 
     like.addEventListener("click", function () {
       if (
-        updateCard.querySelector(".update__like_btn").classList.contains("update__liked_btn")
+        updateCard.querySelector(".update__like-btn").classList.contains("update__liked_btn")
       ) {
-        updateCard.querySelector(".update__like_btn").classList.remove("update__liked_btn");
+        updateCard.querySelector(".update__like-btn").classList.remove("update__liked_btn");
       } else {
-        updateCard.querySelector(".update__like_btn").classList.add("update__liked_btn");
+        updateCard.querySelector(".update__like-btn").classList.add("update__liked_btn");
       }
     });
 
-    let deleteButton = updateCard.querySelector(".update__delete_btn");
+    let deleteButton = updateCard.querySelector(".update__delete-btn");
     deleteButton.addEventListener("click", function () {
       const deletePicture = updateCard;
       deletePicture.remove();
@@ -88,7 +88,7 @@ initialCards.forEach((card, index) => {
     imagen.src = card.link;
     imagen.onclick = function zoomPic() {
       let popZoom = document.querySelector(".zoom");
-      popZoom.classList.remove("zoom__closed");
+      popZoom.classList.remove("zoom-disabled");
       popZoom.classList.add("zoom__open");
       let popImage = document.querySelector(".zoom__image");
       popImage.src = card.link;
@@ -98,18 +98,18 @@ initialCards.forEach((card, index) => {
     let texto = cardCopy.querySelector(".update__title");
     texto.textContent = card.name;
 
-    let like = cardCopy.querySelector(".update__like_btn");
+    let like = cardCopy.querySelector(".update__like-btn");
 
     like.addEventListener("click", function () {
       if (
-        cardCopy.querySelector(".update__like_btn").classList.contains("update__liked_btn")
+        cardCopy.querySelector(".update__like-btn").classList.contains("update__liked_btn")
       ) {
-        cardCopy.querySelector(".update__like_btn").classList.remove("update__liked_btn");
+        cardCopy.querySelector(".update__like-btn").classList.remove("update__liked_btn");
       } else {
-        cardCopy.querySelector(".update__like_btn").classList.add("update__liked_btn");
+        cardCopy.querySelector(".update__like-btn").classList.add("update__liked_btn");
       }
     });
-    let deleteButton = cardCopy.querySelector(".update__delete_btn");
+    let deleteButton = cardCopy.querySelector(".update__delete-btn");
     deleteButton.addEventListener("click", function () {
       const deletePicture = cardCopy;
       deletePicture.remove();
@@ -152,7 +152,7 @@ function newPost() {
   imageValue = document.querySelector(".new-post__url");
   titleValue = document.querySelector(".new-post__text");
 
-  let addButton = document.querySelector(".new-post__create_btn");
+  let addButton = document.querySelector(".new-post__create-btn");
   addButton.addEventListener("click", ()=> addPost(imageValue,titleValue) )
 }
 
@@ -165,25 +165,25 @@ cardCopy.id = initialCards[initialCards.length - 1].id +1;
 
   imagen.onclick = function zoomPic() {
     let popZoom = document.querySelector(".zoom");
-    popZoom.classList.remove("zoom__closed");
+    popZoom.classList.remove("zoom-disabled");
     popZoom.classList.add("zoom__open");
     let popImage = document.querySelector(".zoom__image");
     popImage.src = imageValue.value;
     let popTitle = document.querySelector(".zoom__title");
     popTitle.textContent = titleValue.value;
   };
-  let like = cardCopy.querySelector(".update__like_btn");
+  let like = cardCopy.querySelector(".update__like-btn");
 
   like.addEventListener("click", function () {
     if (
-      cardCopy.querySelector(".update__like_btn").classList.contains("update__liked_btn")
+      cardCopy.querySelector(".update__like-btn").classList.contains("update__liked_btn")
     ) {
-      cardCopy.querySelector(".update__like_btn").classList.remove("update__liked_btn");
+      cardCopy.querySelector(".update__like-btn").classList.remove("update__liked_btn");
     } else {
-      cardCopy.querySelector(".update__like_btn").classList.add("update__liked_btn");
+      cardCopy.querySelector(".update__like-btn").classList.add("update__liked_btn");
     }
   });
-  let deleteButton = cardCopy.querySelector(".update__delete_btn");
+  let deleteButton = cardCopy.querySelector(".update__delete-btn");
   deleteButton.addEventListener("click", function () {
     const deletePicture = cardCopy;
     deletePicture.remove();

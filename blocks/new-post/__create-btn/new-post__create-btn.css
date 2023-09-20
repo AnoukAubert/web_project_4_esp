@@ -1,4 +1,4 @@
-.new-post__create_btn {
+.new-post__create-btn {
   width: 358px;
   height: 50.15px;
   background: #000000;
@@ -12,11 +12,11 @@
   margin-left: 36px;
 }
 @media screen and (min-width:0px) and (max-width: 768px)  {
-  .new-post__create_btn {
+  .new-post__create-btn {
     margin-left: 10%;
     width: 80%;
   }
 }
-.new-post__create_btn:hover {
+.new-post__create-btn:hover {
   opacity: 0.5;
 }

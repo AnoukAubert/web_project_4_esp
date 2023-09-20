@@ -20,10 +20,10 @@
           <div class="profile__container">
             <h1 class="profile__name">Jacques Cousteau</h1>
             <div class="profile__container-b"><h4 class="profile__desciption">Explorador</h4>
-            <button onclick="editProfile()" class="profile__edit_btn"></button></div>
+            <button onclick="editProfile()" class="profile__edit-btn"></button></div>
           </div>
 
-          <button onclick="newPost()" class="profile__add_btn">+</button>
+          <button onclick="newPost()" class="profile__add-btn">+</button>
 
         </section>
       </header>
@@ -32,10 +32,10 @@
         <section class="update">
           <div class="update__card" id="0">
             <img  class="update__image" alt=""/>
-            <button  class="update__delete_btn"></button>
+            <button  class="update__delete-btn"></button>
             <div class="update__description">
               <h2 class="update__title"></h2>
-              <button  class="update__like_btn"></button>
+              <button  class="update__like-btn"></button>
             </div>
           </div>
         </section>
@@ -45,26 +45,26 @@
         <p class="footer__author">&copy; 2023 Anouk Aubert</p>
       </footer>
       
-      <section class="edit-profile edit-profile__closed">
-        <button onclick="closeEdit()" class="edit-profile__close_btn"></button>
+      <section class="edit-profile edit-profile-disabled">
+        <button onclick="closeEdit()" class="edit-profile__close-btn"></button>
         <h3 class="edit-profile__title">Editar Perfil</h3>
         <form class="edit-profile__form">
           <input type="text" class="edit-profile__text" />
           <input type="text"  class="edit-profile__about-me" />
         </form>
-        <button onclick="handleProfileFormSubmit()" class="edit-profile__create_btn">Guardar</button>
+        <button onclick="handleProfileFormSubmit()" class="edit-profile__create-btn">Guardar</button>
       </section>
-      <section class="new-post new-post__closed">
-          <button onclick="closePost()" class="new-post__close_btn"></button>
+      <section class="new-post new-post-disabled">
+          <button onclick="closePost()" class="new-post__close-btn"></button>
           <h3 class="new-post__title">Nuevo lugar</h3>
           <form class="new-post__form">
             <input class="new-post__text"/>
             <input class="new-post__url"/>
           </form>
-          <button class="new-post__create_btn">Crear</button>
+          <button class="new-post__create-btn">Crear</button>
       </section>
-      <section class="zoom zoom__closed">
-        <button onclick="closeZoom()" class="zoom__close_btn"></button>
+      <section class="zoom zoom-disabled">
+        <button onclick="closeZoom()" class="zoom__close-btn"></button>
         <img class="zoom__image" alt=" ">
         <h3 class="zoom__title"></h3>
       </section>

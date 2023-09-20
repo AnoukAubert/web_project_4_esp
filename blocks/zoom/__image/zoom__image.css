@@ -1,11 +1,10 @@
 .zoom__image {
   top: 90px;
   margin-left: 15%;
-  max-width: 75%
+  max-width: 75%;
 }
 @media screen and (min-width:0px) and (max-width: 768px)  {
  .zoom__image {
     margin-left: 10%;
   }
-  
 }

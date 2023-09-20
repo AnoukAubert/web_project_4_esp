@@ -1,4 +1,4 @@
-.profile__edit_btn {
+.profile__edit-btn {
     margin-left: 30%;
     border: none;
     background: url(../../../images/edit.svg) center no-repeat;
@@ -10,7 +10,7 @@
     transition: 0.3s;
    }
 
-  .profile__edit_btn:hover {
+  .profile__edit-btn:hover {
     opacity: 0.5;
   }
   

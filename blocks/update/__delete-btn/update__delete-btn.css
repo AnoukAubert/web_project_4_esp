@@ -1,4 +1,4 @@
-.update__delete_btn {
+.update__delete-btn {
   margin-top: 18px;
   margin-left: -30px;
   border: none;
@@ -11,6 +11,6 @@
   opacity: 0.8;
   transition: 0.3s;
 }
-.update__delete_btn:hover {
+.update__delete-btn:hover {
   opacity: 0.4;
 }

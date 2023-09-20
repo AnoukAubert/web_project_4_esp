@@ -1,4 +1,4 @@
-.edit-profile__close_btn {
+.new-post__close-btn {
   margin-top: -360px;
   margin-left: 430px;
   border: none;
@@ -10,11 +10,12 @@
   position: absolute;
   opacity: 1;
   transition: 0.3s;
-}@media screen and (min-width:0px) and (max-width: 768px)  {
-  .edit-profile__close_btn {
+}
+@media screen and (min-width:0px) and (max-width: 768px)  {
+  .new-post__close-btn {
     margin-left: 100%;
   }
 }
-.edit-profile__close_btn:hover {
+.new-post__close-btn:hover {
   opacity: 0.5;
 }

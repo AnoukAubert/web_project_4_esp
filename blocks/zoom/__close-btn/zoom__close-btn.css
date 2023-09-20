@@ -1,4 +1,4 @@
-.zoom__close_btn {
+.zoom__close-btn {
     margin-top: -40px;
     margin-left: 90%;
     border: none;
@@ -10,16 +10,16 @@
     opacity: 1;
     transition: 0.3s;
   }
-  .zoom__close_btn:hover {
+  .zoom__close-btn:hover {
     opacity: 0.5;
   }
   @media screen and (min-width:768px) and (max-width: 1280px){
-    .zoom__close_btn {
+    .zoom__close-btn {
       margin-left: 90%;
     }
   }
   @media screen and (min-width:0px) and (max-width: 768px){
-    .zoom__close_btn {
+    .zoom__close-btn {
       margin-left: 85%;
     }
   }
