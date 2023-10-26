@@ -1,15 +1,18 @@
 .new-post__title {
-  margin-top: 10px;
+  margin-top: 30px;
   margin-left: 36px;
   font-weight: 900;
   font-size: 24px;
   line-height: 29px;
   color: #000000;
+
 }
-@media screen and (min-width:0px) and (max-width: 768px)  {
+@media screen and (min-width: 0px) and (max-width: 768px) {
   .new-post__title {
     margin-left: 10%;
     width: 80%;
   }
-  
+}
+.new-post__title:valid {
+  border-bottom: 1px solid green;
 }

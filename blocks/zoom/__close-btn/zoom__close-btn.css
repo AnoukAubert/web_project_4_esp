@@ -1,25 +1,25 @@
 .zoom__close-btn {
-    margin-top: -40px;
+  margin-top: 60px;
+  margin-left: calc(100% / 3 * 2);
+  border: none;
+  background: url(../../../images/Closecon.png) center no-repeat;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  opacity: 1;
+  transition: 0.3s;
+}
+.zoom__close-btn:hover {
+  opacity: 0.5;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .zoom__close-btn {
     margin-left: 90%;
-    border: none;
-    background: url(../../../images/Closecon.png) center no-repeat;
-    cursor: pointer;
-    height: 40px;
-    width: 40px;
-    position: absolute;
-    opacity: 1;
-    transition: 0.3s;
   }
-  .zoom__close-btn:hover {
-    opacity: 0.5;
+}
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .zoom__close-btn {
+    margin-left: 85%;
   }
-  @media screen and (min-width:768px) and (max-width: 1280px){
-    .zoom__close-btn {
-      margin-left: 90%;
-    }
-  }
-  @media screen and (min-width:0px) and (max-width: 768px){
-    .zoom__close-btn {
-      margin-left: 85%;
-    }
-  }
+}

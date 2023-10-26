@@ -1,0 +1,5 @@
+.new-post__text_error,.new-post__url_error {
+    font-size: 10px;
+    color: red;
+    margin-left: 36px;
+  }

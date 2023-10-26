@@ -1,0 +1,5 @@
+.create-btn-disabled {
+    color: #b8b8b8;
+    background: #ededed;
+    pointer-events: none;
+  }

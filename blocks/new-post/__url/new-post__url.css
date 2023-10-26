@@ -7,3 +7,6 @@
   margin-left: 36px;
   margin-top: 30px;
 }
+.new-post__url:valid {
+  border-bottom: 1px solid green;
+}

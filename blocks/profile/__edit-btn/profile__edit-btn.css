@@ -1,16 +1,15 @@
 .profile__edit-btn {
-    margin-left: 30%;
-    border: none;
-    background: url(../../../images/edit.svg) center no-repeat;
-    background-size: 100%;
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    position: absolute;
-    transition: 0.3s;
-   }
+  margin-left: 30%;
+  border: none;
+  background: url(../../../images/edit.svg) center no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  transition: 0.3s;
+}
 
-  .profile__edit-btn:hover {
-    opacity: 0.5;
-  }
-  
+.profile__edit-btn:hover {
+  opacity: 0.5;
+}

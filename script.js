@@ -1,10 +1,12 @@
-let editOpen = document.querySelector(".edit-profile__open");
+const editOpen = document.querySelector(".edit-profile__open");
 let profileContainer = document.querySelector(".profile__container");
-let profileEditButton = document.getElementsByClassName(".profile__edit-btn");
+let profileEditButton = document.querySelector(".profile__edit-btn");
 const container = document.querySelector(".update");
-const card = document.querySelector(".card");
+const cardElement = document.querySelector(".card");
 const updateCard = document.querySelector(".update__card");
-
+const editProf = document.querySelector(".edit-profile");
+const newPoste = document.querySelector(".new-post");
+const zoom = document.querySelector(".zoom");
 const initialCards = [
   {
     id: 0,
@@ -18,7 +20,7 @@ const initialCards = [
   },
   {
     id: 2,
-    name: "Montañas Calvas",
+    name: "MontaÃ±as Calvas",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/bald-mountains.jpg",
   },
   {
@@ -43,31 +45,37 @@ function closeZoom() {
   document.querySelector(".zoom").classList.add("zoom-disabled");
 }
 
-initialCards.forEach((card, index) => {
-  if (index == 0) {
+initialCards.forEach((cardElement, index) => {
+  if (index === 0) {
     let imagen = updateCard.querySelector(".update__image");
-    imagen.src = card.link;
+    imagen.src = cardElement.link;
     imagen.onclick = function zoomPic() {
       let popZoom = document.querySelector(".zoom");
       popZoom.classList.remove("zoom-disabled");
       popZoom.classList.add("zoom__open");
       let popImage = document.querySelector(".zoom__image");
-      popImage.src = card.link;
+      popImage.src = cardElement.link;
       let popTitle = document.querySelector(".zoom__title");
-      popTitle.textContent = card.name;
+      popTitle.textContent = cardElement.name;
     };
     let texto = updateCard.querySelector(".update__title");
-    texto.textContent = card.name;
+    texto.textContent = cardElement.name;
 
     let like = updateCard.querySelector(".update__like-btn");
 
     like.addEventListener("click", function () {
       if (
-        updateCard.querySelector(".update__like-btn").classList.contains("update__liked_btn")
+        updateCard
+          .querySelector(".update__like-btn")
+          .classList.contains("update__liked_btn")
       ) {
-        updateCard.querySelector(".update__like-btn").classList.remove("update__liked_btn");
+        updateCard
+          .querySelector(".update__like-btn")
+          .classList.remove("update__liked_btn");
       } else {
-        updateCard.querySelector(".update__like-btn").classList.add("update__liked_btn");
+        updateCard
+          .querySelector(".update__like-btn")
+          .classList.add("update__liked_btn");
       }
     });
 
@@ -75,9 +83,9 @@ initialCards.forEach((card, index) => {
     deleteButton.addEventListener("click", function () {
       const deletePicture = updateCard;
       deletePicture.remove();
-      initialCards.forEach((card) => {
-        if (card.id == index) {
-          initialCards.splice(card.id, 1);
+      initialCards.forEach((cardElement) => {
+        if (cardElement.id === index) {
+          initialCards.splice(cardElement.id, 1);
         }
       });
     });
@@ -85,37 +93,43 @@ initialCards.forEach((card, index) => {
     const cardCopy = updateCard.cloneNode(true);
     cardCopy.id = index;
     let imagen = cardCopy.querySelector(".update__image");
-    imagen.src = card.link;
+    imagen.src = cardElement.link;
     imagen.onclick = function zoomPic() {
       let popZoom = document.querySelector(".zoom");
       popZoom.classList.remove("zoom-disabled");
       popZoom.classList.add("zoom__open");
       let popImage = document.querySelector(".zoom__image");
-      popImage.src = card.link;
+      popImage.src = cardElement.link;
       let popTitle = document.querySelector(".zoom__title");
-      popTitle.textContent = card.name;
+      popTitle.textContent = cardElement.name;
     };
     let texto = cardCopy.querySelector(".update__title");
-    texto.textContent = card.name;
+    texto.textContent = cardElement.name;
 
     let like = cardCopy.querySelector(".update__like-btn");
 
     like.addEventListener("click", function () {
       if (
-        cardCopy.querySelector(".update__like-btn").classList.contains("update__liked_btn")
+        cardCopy
+          .querySelector(".update__like-btn")
+          .classList.contains("update__liked_btn")
       ) {
-        cardCopy.querySelector(".update__like-btn").classList.remove("update__liked_btn");
+        cardCopy
+          .querySelector(".update__like-btn")
+          .classList.remove("update__liked_btn");
       } else {
-        cardCopy.querySelector(".update__like-btn").classList.add("update__liked_btn");
+        cardCopy
+          .querySelector(".update__like-btn")
+          .classList.add("update__liked_btn");
       }
     });
     let deleteButton = cardCopy.querySelector(".update__delete-btn");
     deleteButton.addEventListener("click", function () {
       const deletePicture = cardCopy;
       deletePicture.remove();
-      initialCards.forEach((card) => {
-        if (card.id == index) {
-          initialCards.splice(card.id, 1);
+      initialCards.forEach((cardElement) => {
+        if (cardElement.id == index) {
+          initialCards.splice(cardElement.id, 1);
         }
       });
     });
@@ -123,7 +137,6 @@ initialCards.forEach((card, index) => {
     container.append(cardCopy);
   }
 });
-
 function editProfile() {
   document.querySelector(".edit-profile").classList.add("edit-profile__open");
 }
@@ -153,13 +166,13 @@ function newPost() {
   titleValue = document.querySelector(".new-post__text");
 
   let addButton = document.querySelector(".new-post__create-btn");
-  addButton.addEventListener("click", ()=> addPost(imageValue,titleValue) )
+  addButton.addEventListener("click", () => addPost(imageValue, titleValue));
 }
 
-function addPost(imageValue,titleValue) {
+function addPost(imageValue, titleValue) {
   const cardCopy = updateCard.cloneNode(true);
- 
-cardCopy.id = initialCards[initialCards.length - 1].id +1; 
+
+  cardCopy.id = initialCards[initialCards.length - 1].id + 1;
   let imagen = cardCopy.querySelector(".update__image");
   imagen.src = imageValue.value;
 
@@ -176,20 +189,26 @@ cardCopy.id = initialCards[initialCards.length - 1].id +1;
 
   like.addEventListener("click", function () {
     if (
-      cardCopy.querySelector(".update__like-btn").classList.contains("update__liked_btn")
+      cardCopy
+        .querySelector(".update__like-btn")
+        .classList.contains("update__liked_btn")
     ) {
-      cardCopy.querySelector(".update__like-btn").classList.remove("update__liked_btn");
+      cardCopy
+        .querySelector(".update__like-btn")
+        .classList.remove("update__liked_btn");
     } else {
-      cardCopy.querySelector(".update__like-btn").classList.add("update__liked_btn");
+      cardCopy
+        .querySelector(".update__like-btn")
+        .classList.add("update__liked_btn");
     }
   });
   let deleteButton = cardCopy.querySelector(".update__delete-btn");
   deleteButton.addEventListener("click", function () {
     const deletePicture = cardCopy;
     deletePicture.remove();
-    initialCards.forEach((card) => {
-      if (card.id == index) {
-        initialCards.splice(card.id, 1);
+    initialCards.forEach((cardElement) => {
+      if (cardElement.id == index) {
+        initialCards.splice(cardElement.id, 1);
       }
     });
   });
@@ -200,11 +219,30 @@ cardCopy.id = initialCards[initialCards.length - 1].id +1;
   initialCards.push({
     link: imageValue.value,
     name: titleValue.value,
-    id:initialCards[initialCards.length - 1].id +1
+    id: initialCards[initialCards.length - 1].id + 1,
   });
   closePost();
 }
 
-function closePost() {
-  document.querySelector(".new-post").classList.remove("new-post__open");
-}
+document.addEventListener("keydown", function (evt){
+  if(evt.key === "Escape" && editProf.classList.contains("edit-profile__open") ){
+      editProf.classList.remove("edit-profile__open");
+  } else if(evt.key === "Escape" && newPoste.classList.contains("new-post__open")){
+      newPoste.classList.remove("new-post__open");
+  } else if(evt.key === "Escape" && zoom.classList.contains("zoom__open")){
+      zoom.classList.remove("zoom__open");
+      zoom.classList.add("zoom-disabled");
+  }
+});
+
+document.addEventListener("click", function (evt){
+  console.log(evt.target,newPoste.classList.contains("new-post__open"),evt.target ===newPoste.classList.contains("new-post__open"))
+  if(evt.target.classList.contains("edit-profile__open") && editProf.classList.contains("edit-profile__open") ){
+      editProf.classList.toggle("edit-profile__open");
+  } else if(evt.target.classList.contains("new-post__open") &&  newPoste.classList.contains("new-post__open")){
+      newPoste.classList.toggle("new-post__open");
+  } else if(evt.target.classList.contains("zoom__open") &&  zoom.classList.contains("zoom__open")){
+      zoom.classList.remove("zoom__open");
+      zoom.classList.add("zoom-disabled");
+  }
+})

@@ -1,7 +1,6 @@
 @import url(../styles/normalize.css);
 @import url(../Inter/inter.css);
 @import url(../blocks/content/content.css);
-@import url(../blocks/footer/__author/footer__author.css);
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/header/__logo/header__logo.css);
 @import url(../blocks/header/header.css);
@@ -17,8 +16,6 @@
 @import url(../blocks/update/__card/update__card.css);
 @import url(../blocks/update/__delete-btn/update__delete-btn.css);
 @import url(../blocks/update/__image/update__image.css);
-@import url(../blocks/update/__image_zoom/update__image_zoom.css);
-@import url(../blocks/update/__image_zoom_xbtn/update__image_zoom_xbtn.css);
 @import url(../blocks/update/__like-btn/update__like-btn.css);
 @import url(../blocks/update/__liked_btn/update__liked_btn.css);
 @import url(../blocks/update/__title/update__title.css);
@@ -27,8 +24,12 @@
 @import url(../blocks/new-post/__close-btn/new-post__close-btn.css);
 @import url(../blocks/new-post/-disabled/new-post-disabled.css);
 @import url(../blocks/new-post/__create-btn/new-post__create-btn.css);
+@import url(../blocks/new-post/__form/new-post__form.css);
+/* @import url(../blocks/new-post/__input_type_error/new-post__input_type_error.css); */
 @import url(../blocks/new-post/__open/new-post__open.css);
 @import url(../blocks/new-post/__text/new-post__text.css);
+@import url(../blocks/new-post/__text_error/new-post__text_error.css);
+@import url(../blocks/new-post/__container/new-post__container.css); 
 @import url(../blocks/new-post/__title/new-post__title.css);
 @import url(../blocks/new-post/new-post.css);
 @import url(../blocks/new-post/__url/new-post__url.css);
@@ -40,9 +41,19 @@
 @import url(../blocks/edit-profile/__text/edit-profile__text.css);
 @import url(../blocks/edit-profile/__title/edit-profile__title.css);
 @import url(../blocks/edit-profile/edit-profile.css);
+@import url(../blocks/edit-profile/__button-disabled/edit-profile__button-disabled.css);
+/* @import url(../blocks/edit-profile/__create-btn-disabled/edit-profile__create-btn-disabled.css); */
+/* @import url(../blocks/edit-profile/__input_type_error/edit-profile__input_type_error.css); */
+@import url(../blocks/edit-profile/__text_error/edit-profile__text_error.css);
+/* @import url(../blocks/edit-profile/__text_error-disabled/edit-profile__text_error-disabled.css); */
+@import url(../blocks/edit-profile/__text_error-enabled/edit-profile__text_error-enabled.css);
+@import url(../blocks/edit-profile/__container/edit-profile__container.css);
 @import url(../blocks/zoom/__close-btn/zoom__close-btn.css);
 @import url(../blocks/zoom/-disabled/zoom-disabled.css);
 @import url(../blocks/zoom/__image/zoom__image.css);
 @import url(../blocks/zoom/__open/zoom__open.css);
 @import url(../blocks/zoom/__title/zoom__tittle.css);
 @import url(../blocks/zoom/zoom.css);
+@import url(../blocks/create-btn-disabled/create-btn-disabled.css);
+@import url(../blocks/input_type_error/input_type_error.css);
+@import url(../blocks/text_error-enabled/text_error-enabled.css);
