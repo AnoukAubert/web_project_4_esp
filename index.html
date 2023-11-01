@@ -28,9 +28,8 @@
           <div class="profile__container">
             <h1 class="profile__name">Jacques Cousteau</h1>
             <div class="profile__container-b">
-              <h4 class="profile__desciption">Explorador</h4>
-              <button
-                onclick="editProfile()"
+              <h4 class="profile__description">Explorador</h4>
+              <button onclick="editProfile()"
                 class="profile__edit-btn"
               ></button>
             </div>
@@ -63,9 +62,9 @@
         <h3 class="edit-profile__title">Editar Perfil</h3>
         <form class="edit-profile__form" novalidate>
             <input id="edit-profile__text" type="text" class="edit-profile__text" minlength="2" maxlength="40" required/>
-            <p class="edit-profile__text_error"></p>
+            <p class="edit-profile__text-error"></p>
             <input id="edit-profile__job" type="text" class="edit-profile__about-me" minlength="2" maxlength="200" required/>
-            <p class="edit-profile__job_error"></p>
+            <p class="edit-profile__job-error"></p>
             <button onclick="handleProfileFormSubmit()" class="edit-profile__create-btn create-btn-disabled" type="button"> Guardar</button>
         </form>
         </div>
@@ -76,20 +75,20 @@
         <h3 class="new-post__title">Nuevo lugar</h3>
         <form class="new-post__form"> 
           <input id="new-post__text" type="text" class="new-post__text" minlength="2" maxlength="30" required />
-          <p class="new-post__text_error"></p>
+          <p class="new-post__text-error"></p>
           <input id="new-post__url" class="new-post__url" type="url" required />
-          <p class="new-post__url_error"></p>
-          <button class="new-post__create-btn create-btn-disabled" type="button">Crear</button>
+          <p class="new-post__url-error"></p>
+          <button onclick="addPost()" class="new-post__create-btn create-btn-disabled" type="button">Crear</button>
         </form>
       </div>
       </section>
-      <section class="zoom zoom-disabled">
+      <section class="zoom zoom-disabled" style="text-align: center;">
         <button onclick="closeZoom()" class="zoom__close-btn"></button>
         <img class="zoom__image" alt=" " />
         <h3 class="zoom__title"></h3>
       </section>
     </div>
-    <script src="script.js"></script>
+    <script src="index.js"></script>
     <script type="module" src="validate.js"></script>
   </body>
 </html>

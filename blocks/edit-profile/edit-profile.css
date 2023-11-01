@@ -8,6 +8,7 @@
   margin-top: 0;
   margin-left: 0;
   z-index: 1;
+  transition: 5s ease-in;
 }
 /* @media screen and (min-width: 768px) and (max-width: 1280px) {
   .edit-profile {

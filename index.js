@@ -20,7 +20,7 @@ const initialCards = [
   },
   {
     id: 2,
-    name: "MontaÃ±as Calvas",
+    name: "Montañas Calvas",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/bald-mountains.jpg",
   },
   {
@@ -43,12 +43,15 @@ const initialCards = [
 function closeZoom() {
   document.querySelector(".zoom").classList.remove("zoom__open");
   document.querySelector(".zoom").classList.add("zoom-disabled");
+  document.removeEventListener("keydown", () => add());
+  document.removeEventListener("click");
 }
 
 initialCards.forEach((cardElement, index) => {
   if (index === 0) {
     let imagen = updateCard.querySelector(".update__image");
     imagen.src = cardElement.link;
+    imagen.alt = "fotografía de" + cardElement;
     imagen.onclick = function zoomPic() {
       let popZoom = document.querySelector(".zoom");
       popZoom.classList.remove("zoom-disabled");
@@ -85,7 +88,7 @@ initialCards.forEach((cardElement, index) => {
       deletePicture.remove();
       initialCards.forEach((cardElement) => {
         if (cardElement.id === index) {
-          initialCards.splice(cardElement.id, 1);
+          initialCards.splice(cardElement.id.length, 1);
         }
       });
     });
@@ -94,6 +97,7 @@ initialCards.forEach((cardElement, index) => {
     cardCopy.id = index;
     let imagen = cardCopy.querySelector(".update__image");
     imagen.src = cardElement.link;
+    imagen.alt = "fotografía de" + cardElement;
     imagen.onclick = function zoomPic() {
       let popZoom = document.querySelector(".zoom");
       popZoom.classList.remove("zoom-disabled");
@@ -129,7 +133,7 @@ initialCards.forEach((cardElement, index) => {
       deletePicture.remove();
       initialCards.forEach((cardElement) => {
         if (cardElement.id == index) {
-          initialCards.splice(cardElement.id, 1);
+          initialCards.splice(cardElement.id.length, 1);
         }
       });
     });
@@ -142,6 +146,8 @@ function editProfile() {
 }
 function closeEdit() {
   document.querySelector(".edit-profile").classList.remove("edit-profile__open");
+  document.removeEventListener("keydown", () => add());
+  document.removeEventListener("click");
 }
 
 function handleProfileFormSubmit() {
@@ -149,30 +155,32 @@ function handleProfileFormSubmit() {
   let jobInput = document.querySelector(".edit-profile__about-me");
 
   profileName = document.querySelector(".profile__name");
-  profileDescription = document.querySelector(".profile__desciption");
+  profileDescription = document.querySelector(".profile__description");
 
   profileName.textContent = nameInput.value;
   profileDescription.textContent = jobInput.value;
   closeEdit();
+  nameInput.value="";
+  jobInput.value="";
 }
 function closePost() {
   document.querySelector(".new-post").classList.remove("new-post__open");
+  document.removeEventListener("keydown", () => add());
+  document.removeEventListener("click");
 }
 
 function newPost() {
   document.querySelector(".new-post").classList.add("new-post__open");
-
-  imageValue = document.querySelector(".new-post__url");
-  titleValue = document.querySelector(".new-post__text");
-
-  let addButton = document.querySelector(".new-post__create-btn");
-  addButton.addEventListener("click", () => addPost(imageValue, titleValue));
 }
 
-function addPost(imageValue, titleValue) {
+function addPost() {
+  let imageValue = document.querySelector(".new-post__url");
+  let titleValue = document.querySelector(".new-post__text");
+
   const cardCopy = updateCard.cloneNode(true);
 
   cardCopy.id = initialCards[initialCards.length - 1].id + 1;
+
   let imagen = cardCopy.querySelector(".update__image");
   imagen.src = imageValue.value;
 
@@ -203,15 +211,17 @@ function addPost(imageValue, titleValue) {
     }
   });
   let deleteButton = cardCopy.querySelector(".update__delete-btn");
+
   deleteButton.addEventListener("click", function () {
     const deletePicture = cardCopy;
     deletePicture.remove();
-    initialCards.forEach((cardElement) => {
-      if (cardElement.id == index) {
-        initialCards.splice(cardElement.id, 1);
+    initialCards.forEach((cardElement, index) => {
+      if (cardElement.id == cardCopy.id) {
+        initialCards.splice(index, 1);
       }
     });
   });
+
   let texto = cardCopy.querySelector(".update__title");
   texto.textContent = titleValue.value;
   container.prepend(cardCopy);
@@ -224,25 +234,37 @@ function addPost(imageValue, titleValue) {
   closePost();
 }
 
-document.addEventListener("keydown", function (evt){
-  if(evt.key === "Escape" && editProf.classList.contains("edit-profile__open") ){
-      editProf.classList.remove("edit-profile__open");
-  } else if(evt.key === "Escape" && newPoste.classList.contains("new-post__open")){
-      newPoste.classList.remove("new-post__open");
-  } else if(evt.key === "Escape" && zoom.classList.contains("zoom__open")){
-      zoom.classList.remove("zoom__open");
-      zoom.classList.add("zoom-disabled");
+document.addEventListener("keydown", (e) => add(e));
+
+function add(evt) {
+  if (
+    evt.key === "Escape" &&
+    editProf.classList.contains("edit-profile__open")
+  ) {
+    closeEdit();
+  } else if (
+    evt.key === "Escape" &&
+    newPoste.classList.contains("new-post__open")
+  ) {
+    closePost();
+  } else if (evt.key === "Escape" && zoom.classList.contains("zoom__open")) {
+    closeZoom();
+  }
+}
+
+document.addEventListener("click", function (evt) {
+  if (evt.target.classList.contains("edit-profile__open") &&editProf.classList.contains("edit-profile__open")
+  ) {
+   closeEdit();
+  } else if (
+    evt.target.classList.contains("new-post__open") &&
+    newPoste.classList.contains("new-post__open")
+  ) {
+    closePost();
+  } else if (
+    evt.target.classList.contains("zoom__open") &&
+    zoom.classList.contains("zoom__open")
+  ) {
+    closeZoom();
   }
 });
-
-document.addEventListener("click", function (evt){
-  console.log(evt.target,newPoste.classList.contains("new-post__open"),evt.target ===newPoste.classList.contains("new-post__open"))
-  if(evt.target.classList.contains("edit-profile__open") && editProf.classList.contains("edit-profile__open") ){
-      editProf.classList.toggle("edit-profile__open");
-  } else if(evt.target.classList.contains("new-post__open") &&  newPoste.classList.contains("new-post__open")){
-      newPoste.classList.toggle("new-post__open");
-  } else if(evt.target.classList.contains("zoom__open") &&  zoom.classList.contains("zoom__open")){
-      zoom.classList.remove("zoom__open");
-      zoom.classList.add("zoom-disabled");
-  }
-})

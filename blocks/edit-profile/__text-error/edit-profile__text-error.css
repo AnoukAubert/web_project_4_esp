@@ -1,0 +1,5 @@
+.edit-profile__text-error,.edit-profile__job-error {
+  font-size: 10px;
+  color: red;
+  margin-left: 36px;
+}

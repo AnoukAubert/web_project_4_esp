@@ -8,4 +8,5 @@
   margin-top: 0;
   margin-left: 0;
   z-index: 1;
+  transition: 5s ease;
 }
