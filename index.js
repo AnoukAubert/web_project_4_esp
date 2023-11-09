@@ -44,14 +44,14 @@ function closeZoom() {
   document.querySelector(".zoom").classList.remove("zoom__open");
   document.querySelector(".zoom").classList.add("zoom-disabled");
   document.removeEventListener("keydown", () => add());
-  document.removeEventListener("click");
+  document.removeEventListener("click", () => out());
 }
 
 initialCards.forEach((cardElement, index) => {
   if (index === 0) {
     let imagen = updateCard.querySelector(".update__image");
     imagen.src = cardElement.link;
-    imagen.alt = "fotografía de" + cardElement;
+    imagen.alt = "fotografía de " + cardElement.name;
     imagen.onclick = function zoomPic() {
       let popZoom = document.querySelector(".zoom");
       popZoom.classList.remove("zoom-disabled");
@@ -97,7 +97,7 @@ initialCards.forEach((cardElement, index) => {
     cardCopy.id = index;
     let imagen = cardCopy.querySelector(".update__image");
     imagen.src = cardElement.link;
-    imagen.alt = "fotografía de" + cardElement;
+    imagen.alt = "fotografía de " + cardElement.name;
     imagen.onclick = function zoomPic() {
       let popZoom = document.querySelector(".zoom");
       popZoom.classList.remove("zoom-disabled");
@@ -142,12 +142,17 @@ initialCards.forEach((cardElement, index) => {
   }
 });
 function editProfile() {
+  document.querySelector(".edit-profile").classList.add("edit-profile__efect");
   document.querySelector(".edit-profile").classList.add("edit-profile__open");
 }
 function closeEdit() {
+  let nameInput = document.querySelector(".edit-profile__text");
+  let jobInput = document.querySelector(".edit-profile__about-me");
+  nameInput.value = "";
+  jobInput.value= "";
   document.querySelector(".edit-profile").classList.remove("edit-profile__open");
   document.removeEventListener("keydown", () => add());
-  document.removeEventListener("click");
+  document.removeEventListener("click", () => out());
 }
 
 function handleProfileFormSubmit() {
@@ -160,13 +165,16 @@ function handleProfileFormSubmit() {
   profileName.textContent = nameInput.value;
   profileDescription.textContent = jobInput.value;
   closeEdit();
-  nameInput.value="";
-  jobInput.value="";
+  
 }
 function closePost() {
+  let imageValue = document.querySelector(".new-post__url");
+  let titleValue = document.querySelector(".new-post__text");
+  imageValue.value = "";
+  titleValue.value= "";
   document.querySelector(".new-post").classList.remove("new-post__open");
   document.removeEventListener("keydown", () => add());
-  document.removeEventListener("click");
+  document.removeEventListener("click", () => out());
 }
 
 function newPost() {
@@ -183,6 +191,7 @@ function addPost() {
 
   let imagen = cardCopy.querySelector(".update__image");
   imagen.src = imageValue.value;
+  imagen.alt =  "fotografía de " + titleValue.value
 
   imagen.onclick = function zoomPic() {
     let popZoom = document.querySelector(".zoom");
@@ -190,6 +199,7 @@ function addPost() {
     popZoom.classList.add("zoom__open");
     let popImage = document.querySelector(".zoom__image");
     popImage.src = imageValue.value;
+    popImage.alt = "fotografía de " + titleValue.value;
     let popTitle = document.querySelector(".zoom__title");
     popTitle.textContent = titleValue.value;
   };
@@ -233,7 +243,8 @@ function addPost() {
   });
   closePost();
 }
-
+editProf.addEventListener('submit', handleProfileFormSubmit);
+newPoste.addEventListener('submit', addPost);
 document.addEventListener("keydown", (e) => add(e));
 
 function add(evt) {
@@ -249,10 +260,22 @@ function add(evt) {
     closePost();
   } else if (evt.key === "Escape" && zoom.classList.contains("zoom__open")) {
     closeZoom();
+  } else if (
+    evt.key === "Enter" &&
+    editProf.classList.contains("edit-profile__open")
+  ) {
+    handleProfileFormSubmit();
+  } else if (
+    evt.key === "Enter" &&
+    newPoste.classList.contains("new-post__open")
+  ) {
+    addPost();
   }
 }
 
-document.addEventListener("click", function (evt) {
+document.addEventListener("click", (e) => out (e));
+
+function out(evt) {
   if (evt.target.classList.contains("edit-profile__open") &&editProf.classList.contains("edit-profile__open")
   ) {
    closeEdit();
@@ -267,4 +290,4 @@ document.addEventListener("click", function (evt) {
   ) {
     closeZoom();
   }
-});
+};

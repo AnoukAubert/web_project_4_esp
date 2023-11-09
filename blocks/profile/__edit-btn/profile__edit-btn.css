@@ -6,10 +6,21 @@
   cursor: pointer;
   height: 15px;
   width: 15px;
+  margin-top: 25px;
   position: absolute;
   transition: 0.3s;
 }
-
 .profile__edit-btn:hover {
   opacity: 0.5;
+}
+/* @media screen and (min-width: 768px) and (max-width: 1280px) {
+  .profile__edit-btn {
+    margin-top: 8%;
+    margin-left: 20%;
+  }
+} */
+
+/* 
+#profile__edit-btn:target ~ .edit-profile .edit-profile__container {
+  transform: scale(0%);
 }

@@ -1,3 +1,11 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .new-post__container {
   width: 450px;
   height: 350px;
@@ -6,6 +14,9 @@
   border-right: 1px solid #000;
   margin-left: calc(100% / 3);
   z-index: 2;
+}
+.new-post__open {
+  animation: fadeIn ease 1s;
 }
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .new-post__container {

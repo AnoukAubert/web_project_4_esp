@@ -1,3 +1,19 @@
-.new-post-disabled {
-  display: none;
+@keyframes fadeOut{
+  0% {
+    opacity:1;
+  } 
+  33%{
+    opacity: 0.5;
+  }
+  63%{
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+   display:none; 
+  }
 }
+.new-post-disabled {
+  animation: fadeOut  1s  forwards;
+  display: none;
+  }  
