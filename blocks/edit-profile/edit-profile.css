@@ -1,5 +1,6 @@
 .edit-profile {
   position: fixed;
+  display: none;
   background: rgb(128, 128, 128, 0.5);
   width: 100%;
   height: 100%;
@@ -8,20 +9,40 @@
   margin-top: 0;
   margin-left: 0;
   z-index: 1;
+  transition: opacity 0.5s ease;
 }
-/* @media screen and (min-width: 768px) and (max-width: 1280px) {
-  .edit-profile {
-    margin-left: 25%;
+
+@keyframes fadein {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
   }
 }
-@media screen and (min-width: 0px) and (max-width: 768px) {
-  .edit-profile {
-    margin-left: 10%;
-    width: 80%;
+@keyframes fadeout {
+  from {
+      opacity: 1;
   }
-} */
-/* .edit-profile .edit-profile__efect {
-  transform: scale(0.7);
-  /* opacity: 0; */
-  /* transition: all 0.3s; */
-/* } */
+  to {
+      opacity: 0;
+  }
+}
+
+
+.edit-profile__open {
+  display: flex;
+  flex-direction: column;
+  transition: center 0.5s;
+  justify-content: center;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  z-index: 1;
+  animation: fadein 0.5s ease;
+}
+
+
+.edit-profile__open:not(.edit-profile__open) {
+  opacity: 0;
+  pointer-events: none;
+}

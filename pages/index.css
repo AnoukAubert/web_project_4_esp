@@ -22,7 +22,6 @@
 @import url(../blocks/update/__desciption/update__description.css);
 @import url(../blocks/update/update.css);
 @import url(../blocks/new-post/__close-btn/new-post__close-btn.css);
-@import url(../blocks/new-post/-disabled/new-post-disabled.css);
 @import url(../blocks/new-post/__create-btn/new-post__create-btn.css);
 @import url(../blocks/new-post/__form/new-post__form.css);
 @import url(../blocks/new-post/__open/new-post__open.css);
@@ -32,15 +31,12 @@
 @import url(../blocks/new-post/__title/new-post__title.css);
 @import url(../blocks/new-post/new-post.css);
 @import url(../blocks/new-post/__url/new-post__url.css);
-@import url(../blocks/edit-profile/-disabled/edit-profile-disabled.css);
 @import url(../blocks/edit-profile/__about-me/edit-profile__about-me.css);
-@import url(../blocks/edit-profile/__button-disabled/edit-profile__button-disabled.css);
 @import url(../blocks/edit-profile/__button_disabled/edit-profile__button_disabled.css);
 @import url(../blocks/edit-profile/__close-btn/edit-profile__close-btn.css);
 @import url(../blocks/edit-profile/__container/edit-profile__container.css);
 @import url(../blocks/edit-profile/__create-btn-disabled/edit-profile__create-btn-disabled.css);
 @import url(../blocks/edit-profile/__create-btn/edit-profile__create-btn.css);
-@import url(../blocks/edit-profile/__efect/edit-profile__efect.css);
 @import url(../blocks/edit-profile/__form/edit-profile__form.css);
 @import url(../blocks/edit-profile/__input_type_error/edit-profile__input_type_error.css);
 @import url(../blocks/edit-profile/__open/edit-profile__open.css);
@@ -53,7 +49,6 @@
 @import url(../blocks/edit-profile/__title/edit-profile__title.css);
 @import url(../blocks/edit-profile/edit-profile.css);
 @import url(../blocks/zoom/__close-btn/zoom__close-btn.css);
-@import url(../blocks/zoom/-disabled/zoom-disabled.css);
 @import url(../blocks/zoom/__image/zoom__image.css);
 @import url(../blocks/zoom/__open/zoom__open.css);
 @import url(../blocks/zoom/__title/zoom__tittle.css);
