@@ -1,5 +1,5 @@
 import {closePost, closeEdit, initialCards, container} from './utils.js';
-import Card from './Card.js';
+import Card from './Card_.js';
 import FormValidator from './FormValidator.js';
 
 const addButton = document.querySelector('.profile__add-btn');
