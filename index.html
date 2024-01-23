@@ -29,36 +29,29 @@
             
             <div class="profile__container-b">
               <h1 class="profile__name">Jacques Cousteau</h1>
-              <button onclick="editProfile()"
+              <button 
                 class="profile__edit-btn"
               ></button>
             </div>
             <h4 class="profile__description">Explorador</h4>
           </div>
 
-          <button onclick="newPost()" class="profile__add-btn">+</button>
+          <button  class="profile__add-btn">+</button>
         </section>
       </header>
 
       <main class="content">
         <section class="update">
-          <div class="update__card" id="0">
-            <img class="update__image" alt="" />
-            <button class="update__delete-btn"></button>
-            <div class="update__description">
-              <h2 class="update__title"></h2>
-              <button class="update__like-btn"></button>
-            </div>
-          </div>
+         
         </section>
       </main>
 
       <footer class="footer">
-        <p>&copy; 2023 Anouk Aubert</p>
+        <p>&copy; 2024 Anouk Aubert</p>
       </footer>
 
       <section class="edit-profile">
-        <button onclick="closeEdit()" class="edit-profile__close-btn"></button>
+        <button  class="edit-profile__close-btn"></button>
         <div class="edit-profile__container">
         <h3 class="edit-profile__title">Editar Perfil</h3>
         <form class="edit-profile__form" novalidate>
@@ -66,12 +59,12 @@
             <p class="edit-profile__text-error"></p>
             <input id="edit-profile__job" type="text" class="edit-profile__about-me" minlength="2" maxlength="200" required/>
             <p class="edit-profile__job-error"></p>
-            <button onclick="handleProfileFormSubmit()" class="edit-profile__create-btn create-btn-disabled" type="button"> Guardar</button>
+            <button  class="edit-profile__create-btn create-btn-disabled" type="submit"> Guardar</button>
         </form>
         </div>
       </section>
       <section class="new-post">
-        <button onclick="closePost()" class="new-post__close-btn"></button>
+        <button  class="new-post__close-btn"></button>
        <div class="new-post__container">
         <h3 class="new-post__title">Nuevo lugar</h3>
         <form class="new-post__form"> 
@@ -79,17 +72,31 @@
           <p class="new-post__text-error"></p>
           <input id="new-post__url" class="new-post__url" type="url" required />
           <p class="new-post__url-error"></p>
-          <button onclick="addPost()" class="new-post__create-btn create-btn-disabled" type="button">Crear</button>
+          <button class="new-post__create-btn create-btn-disabled" type="submit">Crear</button>
         </form>
       </div>
       </section>
       <section class="zoom" >
-        <button onclick="closeZoom()" class="zoom__close-btn"></button>
-        <img class="zoom__image" src="" alt=" "/>
+        <button class="zoom__close-btn"></button>
+        <img class="zoom__image" src=" " alt=" "/>
         <h3 class="zoom__title"></h3>
       </section>
     </div>
-    <script src="index.js"></script>
-    <script type="module" src="validate.js"></script>
+    
+    <template class="template-card">
+      <div class="update__card">
+        <img class="update__image" alt="" />
+        <button class="update__delete-btn"></button>
+        <div class="update__description">
+          <h2 class="update__title"></h2>
+          <button class="update__like-btn"></button>
+        </div>
+      </div>
+    </template>
+
+
+    <script type="module" src="index.js"></script>
+    <script type="module" src="utils.js"></script>
+    
   </body>
 </html>
