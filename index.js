@@ -1,5 +1,5 @@
 import {closePost, closeEdit, initialCards, container} from './utils.js';
-import Card from './card.js';
+import Card from './Card.js';
 import FormValidator from './FormValidator.js';
 
 const addButton = document.querySelector('.profile__add-btn');
@@ -8,7 +8,6 @@ const formAddCard = document.querySelector('.new-post__form');
 
 const nameCardInput = document.querySelector('.new-post__text');
 const linkCardInput = document.querySelector('.new-post__url');
-
 
 
 export function handleProfileFormSubmit(event) {
