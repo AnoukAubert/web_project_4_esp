@@ -1,4 +1,4 @@
-import {closePost, closeEdit, initialCards, container} from './utils.js';
+import {closePost, closeEdit, initialCards, container, add, out} from './utils.js';
 import Card from './Card.js';
 import FormValidator from './FormValidator.js';
 
@@ -39,7 +39,8 @@ export function addPost(event) {
   container.prepend(cardCopy.generateCard());
   closePost();
 }
-
+document.addEventListener("click", (e) => out(e));
+document.addEventListener("keydown", (e) => add(e));
 addButton.addEventListener('click', newPost);
 formProfile.addEventListener('submit', handleProfileFormSubmit);
 formAddCard.addEventListener('submit', addPost);
