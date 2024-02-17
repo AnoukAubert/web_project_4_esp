@@ -1,0 +1,22 @@
+.popup__create-btn {
+  width: 358px;
+  height: 50.15px;
+  background: #000000;
+  border-radius: 2px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 30px;
+  margin-left: 36px;
+}
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .popup__create-btn {
+    margin-left: 10%;
+    width: 80%;
+  }
+}
+.popup__create-btn:hover {
+  opacity: 0.5;
+}

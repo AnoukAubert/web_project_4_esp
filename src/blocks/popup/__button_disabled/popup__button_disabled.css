@@ -1,0 +1,19 @@
+.popup__button_disabled {
+  width: 358px;
+  height: 50.15px;
+  background: grey;
+  border-radius: 2px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 30px;
+  margin-left: 36px;
+}
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .popup__button_disabled {
+    margin-left: 10%;
+    width: 80%;
+  }
+}

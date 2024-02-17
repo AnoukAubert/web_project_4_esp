@@ -1,0 +1,21 @@
+.popup__close-btn-zoom {
+  margin-top: -560px;
+  margin-left: calc(100% / 8 * 7);
+  border: none;
+  background: url(../../../images/Closecon.png) center no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  opacity: 1;
+  transition: 0.3s;
+}
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .popup__close-btn-zoom {
+    margin-left: 100%;
+  }
+}
+.popup__close-btn-zoom:hover {
+  opacity: 0.5;
+}

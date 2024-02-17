@@ -1,0 +1,22 @@
+
+.popup__container {
+  width: 450px;
+  height: 350px;
+  background-color: white;
+  border-radius: 15px;
+  border-right: 1px solid #000;
+  margin-left: calc(100% / 3);
+  z-index: 2;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .popup__container {
+    margin-left: 25%;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .popup__container {
+    margin-left: 10%;
+  }
+}

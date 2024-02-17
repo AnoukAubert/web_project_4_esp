@@ -1,0 +1,5 @@
+.popup__text-error,.popup__job-error {
+  font-size: 10px;
+  color: red;
+  margin-left: 36px;
+}

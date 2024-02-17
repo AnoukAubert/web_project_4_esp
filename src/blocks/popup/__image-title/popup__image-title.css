@@ -1,0 +1,21 @@
+.popup__image-title {
+    width: 291px;
+    color: #fff;
+    text-shadow: black;
+    text-decoration: black;
+    font-size: 24px;
+    font-family: Inter;
+    line-height: 29px;
+    margin-left: 15%;
+    font-style: normal;
+    font-weight: 900;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  @media screen and (min-width: 0px) and (max-width: 768px) {
+    .popup__image-title {
+      margin-left: 10%;
+    }
+  }
+  

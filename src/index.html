@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+   
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://code.s3.yandex.net/web-code/favicon.ico"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Around the US</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <img
+          class="header__logo"
+          alt="logo Around The US"
+          src="<%=require('../src/images/logo.svg')%>"
+        />
+        <section class="profile">
+          <img
+            class="profile__image"
+            src="<%=require('../src/images/Avatar.png')%>"
+            alt="imagen de perfil"
+          />
+          <div class="profile__container">
+            
+            <div class="profile__container-b">
+              <h1 class="profile__name">Jacques Cousteau</h1>
+              <button 
+                class="profile__edit-btn"
+              ></button>
+            </div>
+            <h4 class="profile__description">Explorador</h4>
+          </div>
+
+          <button  class="profile__add-btn">+</button>
+        </section>
+      </header>
+
+      <main class="content">
+        <section class="update">
+         
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>&copy; 2024 Anouk Aubert</p>
+      </footer>
+
+      <section class="popup popup_profile">
+        <button  class="popup__close-btn"></button>
+        <div class="popup__container">
+        <h3 class="popup__title">Editar Perfil</h3>
+        <form class="popup__form" novalidate>
+            <input id="popup__text" type="text" class="popup__text" name="name" minlength="2" maxlength="40" required/>
+            <p class="popup__text-error"></p>
+            <input id="popup__job" type="text" class="popup__about-me" name="about" minlength="2" maxlength="200" required/>
+            <p class="popup__job-error"></p>
+            <button  class="popup__create-btn create-btn-disabled" type="submit"> Guardar</button>
+        </form>
+        </div>
+      </section>
+      <section class="popup popup_new-post">
+        <button  class="popup__close-btn"></button>
+       <div class="popup__container">
+        <h3 class="popup__title">Nuevo lugar</h3>
+        <form class="popup__form"> 
+          <input id="popup__text" type="text" class="popup__text" name="title" minlength="2" maxlength="30" required />
+          <p class="popup__text-error"></p>
+          <input id="popup__url" class="popup__url" type="url" name="link" required />
+          <p class="popup__url-error"></p>
+          <button class="popup__create-btn create-btn-disabled" type="submit">Crear</button>
+        </form>
+      </div>
+      </section>
+      <section class="popup popup_zoom" >
+        <button class="popup__close-btn popup__close-btn-zoom"></button>
+        <img class="popup__image" src=" " alt=" "/>
+        <h3 class="popup__image-title"></h3>
+      </section>
+    </div>
+    
+    <template class="template-card">
+      <div class="update__card">
+        <img class="update__image" alt="" />
+        <button class="update__delete-btn"></button>
+        <div class="update__description">
+          <h2 class="update__title"></h2>
+          <button class="update__like-btn"></button>
+        </div>
+      </div>
+    </template>
+    
+  </body>
+</html>

@@ -1,0 +1,21 @@
+.popup__close-btn {
+  margin-top: -360px;
+  margin-left: calc(100% / 3 * 2);
+  border: none;
+  background: url(../../../images/Closecon.png) center no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  opacity: 1;
+  transition: 0.3s;
+}
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .popup__close-btn {
+    margin-left: 100%;
+  }
+}
+.popup__close-btn:hover {
+  opacity: 0.5;
+}
