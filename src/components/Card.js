@@ -1,7 +1,5 @@
 export default class Card {
-  constructor(link, title, templateSelector, {
-    handleCardClick
-  }) {
+  constructor(link, title, templateSelector, { handleCardClick }) {
     this._link = link;
     this._title = title;
     this._templateSelector = templateSelector;
@@ -10,8 +8,8 @@ export default class Card {
 
   _setEventListener() {
     const cardNode = this._element;
-    cardNode.querySelector(".update__image").onclick = () =>{
-     this._handleCardClick(this._link, this._title);
+    cardNode.querySelector(".update__image").onclick = () => {
+      this._handleCardClick(this._link, this._title);
     };
     let like = cardNode.querySelector(".update__like-btn");
     like.addEventListener("click", () => {
@@ -44,8 +42,8 @@ export default class Card {
     cardNode.querySelector(".update__image").alt =
       "fotografía de " + this._title;
 
-    let texto = cardNode.querySelector('.update__title');
-    texto.textContent = this._title;    
+    let texto = cardNode.querySelector(".update__title");
+    texto.textContent = this._title;
 
     return cardNode;
   }
