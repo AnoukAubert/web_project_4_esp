@@ -1,4 +1,5 @@
 .profile__container-b {
   display: flex;
   flex-direction: row;
+  width: auto;
  }
