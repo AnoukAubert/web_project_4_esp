@@ -9,6 +9,11 @@
   grid-template-rows: auto;
   gap: 21px;
 }
+
+.update__counter {
+  color: black;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .update {
     margin-top: 5%;

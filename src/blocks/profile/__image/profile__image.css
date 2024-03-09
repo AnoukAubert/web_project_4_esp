@@ -2,4 +2,14 @@
   width: 120px;
   height: 120px;
   margin-right: 30px;
+  border-radius: 50%;
+}
+
+.profile__image:hover {
+  opacity: 0.5;
+}
+
+
+.profile__image:hover ~ .profile__image-btn {
+  opacity: 1;
 }

@@ -20,11 +20,14 @@
           src="<%=require('../src/images/logo.svg')%>"
         />
         <section class="profile">
-          <img
-            class="profile__image"
-            src="<%=require('../src/images/Avatar.png')%>"
-            alt="imagen de perfil"
-          />
+          <div>
+            <img
+              class="profile__image"
+              src="<%=require('../src/images/Avatar.png')%>"
+              alt="imagen de perfil"
+            />
+            <button class="profile__image-btn"></button>
+          </div>
           <div class="profile__container">
             
             <div class="profile__container-b">
@@ -56,9 +59,9 @@
         <h3 class="popup__title">Editar Perfil</h3>
         <form class="popup__form" novalidate>
             <input id="popup__text" type="text" class="popup__text" name="name" minlength="2" maxlength="40" required/>
-            <p class="popup__text-error"></p>
+            <p class="popup__error popup__text-error"></p>
             <input id="popup__job" type="text" class="popup__about-me" name="about" minlength="2" maxlength="200" required/>
-            <p class="popup__job-error"></p>
+            <p class="popup__error popup__job-error"></p>
             <button  class="popup__create-btn create-btn-disabled" type="submit"> Guardar</button>
         </form>
         </div>
@@ -68,10 +71,10 @@
        <div class="popup__container">
         <h3 class="popup__title">Nuevo lugar</h3>
         <form class="popup__form"> 
-          <input id="popup__text" type="text" class="popup__text" name="title" minlength="2" maxlength="30" required />
-          <p class="popup__text-error"></p>
+          <input id="popup__title" type="text" class="popup__text" name="title" minlength="2" maxlength="30" required />
+          <p class="popup__error popup__title-error"></p>
           <input id="popup__url" class="popup__url" type="url" name="link" required />
-          <p class="popup__url-error"></p>
+          <p class="popup__error popup__url-error"></p>
           <button class="popup__create-btn create-btn-disabled" type="submit">Crear</button>
         </form>
       </div>
@@ -81,7 +84,24 @@
         <img class="popup__image" src=" " alt=" "/>
         <h3 class="popup__image-title"></h3>
       </section>
-    </div>
+      <section class="popup popup_pic">
+        <button  class="popup__close-btn"></button>
+        <div class="popup__container">
+        <h3 class="popup__title">Cambiar Imagen de Perfil</h3>
+        <form class="popup__form" novalidate>
+          <input id="popup__url-pic" class="popup__url-pic" type="url" name="pic" required />
+          <p class="popup__error popup__url-pic-error"></p>
+          <button  class="popup__create-btn create-btn-disabled" type="submit"> Guardar</button>
+        </form>
+        </div>
+      </section>
+      <section class="popup popup_erase">
+        <button  class="popup__close-btn"></button>
+        <div class="popup__container">
+        <h3 class="popup__title">¿Estás seguro/a?</h3>
+          <button  class="popup__create-btn popup__yes-btn" type="submit">Sí</button>
+        </div>
+      </section>
     
     <template class="template-card">
       <div class="update__card">
@@ -90,6 +110,7 @@
         <div class="update__description">
           <h2 class="update__title"></h2>
           <button class="update__like-btn"></button>
+          <p class="update__counter">0</p>
         </div>
       </div>
     </template>

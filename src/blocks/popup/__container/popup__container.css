@@ -1,12 +1,12 @@
 
 .popup__container {
   width: 450px;
-  height: 350px;
   background-color: white;
   border-radius: 15px;
   border-right: 1px solid #000;
   margin-left: calc(100% / 3);
   z-index: 2;
+  padding-bottom: 30px;
 }
 
 

@@ -1,0 +1,13 @@
+.profile__image-btn {
+  margin-left: -95px;
+  border: none;
+  background: url(../../../images/Vector.png) center no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+  height: 26px;
+  width: 26px;
+  margin-top: 50px;
+  position: absolute;
+  transition: 0.3s;
+  opacity: 0;
+}
