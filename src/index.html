@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-   
     <link
       rel="icon"
       type="image/x-icon"
@@ -29,24 +28,19 @@
             <button class="profile__image-btn"></button>
           </div>
           <div class="profile__container">
-            
             <div class="profile__container-b">
               <h1 class="profile__name">Jacques Cousteau</h1>
-              <button 
-                class="profile__edit-btn"
-              ></button>
+              <button class="profile__edit-btn"></button>
             </div>
             <h4 class="profile__description">Explorador</h4>
           </div>
 
-          <button  class="profile__add-btn">+</button>
+          <button class="profile__add-btn">+</button>
         </section>
       </header>
 
       <main class="content">
-        <section class="update">
-         
-        </section>
+        <section class="update"></section>
       </main>
 
       <footer class="footer">
@@ -54,52 +48,96 @@
       </footer>
 
       <section class="popup popup_profile">
-        <button  class="popup__close-btn"></button>
+        <button class="popup__close-btn"></button>
         <div class="popup__container">
-        <h3 class="popup__title">Editar Perfil</h3>
-        <form class="popup__form" novalidate>
-            <input id="popup__text" type="text" class="popup__text" name="name" minlength="2" maxlength="40" required/>
+          <h3 class="popup__title">Editar Perfil</h3>
+          <form class="popup__form" novalidate>
+            <input
+              id="popup__text"
+              type="text"
+              class="popup__text"
+              name="name"
+              minlength="2"
+              maxlength="40"
+              required
+            />
             <p class="popup__error popup__text-error"></p>
-            <input id="popup__job" type="text" class="popup__about-me" name="about" minlength="2" maxlength="200" required/>
+            <input
+              id="popup__job"
+              type="text"
+              class="popup__about-me"
+              name="about"
+              minlength="2"
+              maxlength="200"
+              required
+            />
             <p class="popup__error popup__job-error"></p>
-            <button  class="popup__create-btn create-btn-disabled" type="submit"> Guardar</button>
-        </form>
+            <button class="popup__create-btn create-btn-disabled" type="submit">
+              Guardar
+            </button>
+          </form>
         </div>
       </section>
       <section class="popup popup_new-post">
-        <button  class="popup__close-btn"></button>
-       <div class="popup__container">
-        <h3 class="popup__title">Nuevo lugar</h3>
-        <form class="popup__form"> 
-          <input id="popup__title" type="text" class="popup__text" name="title" minlength="2" maxlength="30" required />
-          <p class="popup__error popup__title-error"></p>
-          <input id="popup__url" class="popup__url" type="url" name="link" required />
-          <p class="popup__error popup__url-error"></p>
-          <button class="popup__create-btn create-btn-disabled" type="submit">Crear</button>
-        </form>
-      </div>
+        <button class="popup__close-btn"></button>
+        <div class="popup__container">
+          <h3 class="popup__title">Nuevo lugar</h3>
+          <form class="popup__form">
+            <input
+              id="popup__title"
+              type="text"
+              class="popup__text"
+              name="title"
+              minlength="2"
+              maxlength="30"
+              required
+            />
+            <p class="popup__error popup__title-error"></p>
+            <input
+              id="popup__url"
+              class="popup__url"
+              type="url"
+              name="link"
+              required
+            />
+            <p class="popup__error popup__url-error"></p>
+            <button class="popup__create-btn create-btn-disabled" type="submit">
+              Crear
+            </button>
+          </form>
+        </div>
       </section>
-      <section class="popup popup_zoom" >
+      <section class="popup popup_zoom">
         <button class="popup__close-btn popup__close-btn-zoom"></button>
-        <img class="popup__image" src=" " alt=" "/>
+        <img class="popup__image" src=" " alt=" " />
         <h3 class="popup__image-title"></h3>
       </section>
       <section class="popup popup_pic">
-        <button  class="popup__close-btn"></button>
+        <button class="popup__close-btn"></button>
         <div class="popup__container">
-        <h3 class="popup__title">Cambiar Imagen de Perfil</h3>
-        <form class="popup__form" novalidate>
-          <input id="popup__url-pic" class="popup__url-pic" type="url" name="pic" required />
-          <p class="popup__error popup__url-pic-error"></p>
-          <button  class="popup__create-btn create-btn-disabled" type="submit"> Guardar</button>
-        </form>
+          <h3 class="popup__title">Cambiar Imagen de Perfil</h3>
+          <form class="popup__form" novalidate>
+            <input
+              id="popup__url-pic"
+              class="popup__url-pic"
+              type="url"
+              name="pic"
+              required
+            />
+            <p class="popup__error popup__url-pic-error"></p>
+            <button class="popup__create-btn create-btn-disabled" type="submit">
+              Guardar
+            </button>
+          </form>
         </div>
       </section>
       <section class="popup popup_erase">
-        <button  class="popup__close-btn"></button>
+        <button class="popup__close-btn"></button>
         <div class="popup__container">
-        <h3 class="popup__title">¿Estás seguro/a?</h3>
-          <button  class="popup__create-btn popup__yes-btn" type="submit">Sí</button>
+          <h3 class="popup__title">¿Estás seguro/a?</h3>
+          <button class="popup__create-btn popup__yes-btn" type="submit">
+            Sí
+          </button>
         </div>
       </section>
     </div>
@@ -109,11 +147,12 @@
         <button class="update__delete-btn"></button>
         <div class="update__description">
           <h2 class="update__title"></h2>
-          <button class="update__like-btn"></button>
-          <p class="update__counter">0</p>
+          <div class="update__like-container">
+            <button class="update__like-btn"></button>
+            <p class="update__counter">0</p>
+          </div>
         </div>
       </div>
     </template>
-    
   </body>
 </html>

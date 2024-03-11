@@ -14,8 +14,10 @@
 @import url(../blocks/profile/__image-btn/profile__image-btn.css);
 @import url(../blocks/profile/profile.css);
 @import url(../blocks/update/__card/update__card.css);
+@import url(../blocks/update/__counter/update__counter.css);
 @import url(../blocks/update/__delete-btn/update__delete-btn.css);
 @import url(../blocks/update/__image/update__image.css);
+@import url(../blocks/update/__like-container/update__like-container.css);
 @import url(../blocks/update/__like-btn/update__like-btn.css);
 @import url(../blocks/update/__liked_btn/update__liked_btn.css);
 @import url(../blocks/update/__title/update__title.css);

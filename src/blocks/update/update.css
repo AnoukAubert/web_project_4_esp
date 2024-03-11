@@ -27,6 +27,8 @@
 @media screen and (min-width: 0px) and (max-width: 768px) {
   .update {
     margin-top: 5%;
+    padding-left: 5%;
+    align-items: center;
     display: flex;
     flex-direction: column;
     align-items: center;
